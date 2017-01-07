@@ -1,0 +1,25 @@
+<template name="postItem">
+    {{#each postes}}
+    <div class="post-preview">
+        <a href="/post" class="click">
+            <h2 class="post-title" id="{{_id}}">
+                {{titre}}
+            </h2></a>
+           <!--  <h5 class="post-subtitle" style="text-align: center">
+               {{content}}
+            </h5>-->
+
+        <div class="chip">
+            {{#if hasPhoto  author}}
+            <img src="{{getPhoto author}}" alt="Contact Person" width="40" height="40" >{{/if}}
+
+            <span class="">{{auteur author}} on {{formateTime createdAt}}</span>
+        </div>
+    </div>
+    <hr>
+    {{/each}}
+<ul class="pager">
+    <li class="previous"><a href="#">&larr; Previous</a></li>
+    <li class="next {{#if totalCount }} hide {{/if}}" style=""><a href="#">Next &rarr; </a></li>
+</ul>
+</template>

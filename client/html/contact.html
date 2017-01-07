@@ -1,0 +1,88 @@
+<template name="contact">
+
+    <header class="intro-header" style="background: url('/contact-bg.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="page-heading">
+                        <h1>Contacter Nous</h1>
+                        <hr class="small">
+                        <span class="subheading">Chaque question à une réponse !</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+                <form name="sentMessage" id="contactForm" >
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Email</label>
+                            <input type="text" class="form-control" placeholder="Email" id="mail" required data-validation-required-message="Entrer Votre Mail !">
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <div class="row control-group">
+                        <div class="form-group col-xs-12 floating-label-form-group controls">
+                            <label>Message</label>
+                            <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                            <p class="help-block text-danger"></p>
+                        </div>
+                    </div>
+                    <br>
+                    <div id="success"></div>
+
+                        <div class="form-group col-xs-12">
+                            <button type="submit" style="padding-top:0px" class="btn btn-default" id="btn_sub">Send</button>
+                        </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/FadlaouiHs">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:fadlaouimohamed@gmail.com">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; FADLAOUI Mohamed 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</template>

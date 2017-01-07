@@ -1,0 +1,104 @@
+<template name="userInfo">
+    <link href="http://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <header  class="intro-header" style="background: url('/info.jpg'); height: 450px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                        <div class="page-heading">
+                            <h1>{{owner}}</h1>
+                            <hr class="small">
+                            <span class="subheading">Modifier vos informations !</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="container" style="text-align:center">
+                                    {{#if hasPhoto owner}}
+                                        <img id="photo-user1" style="border-radius:50%;border:2px solid #000" src="{{getPhoto owner}}" alt="" width="170px;" height="160px">
+                                    {{else}}
+                                    <img id="photo-user" style="border-radius:50%;border:2px solid #000" src="/anonyme.jpg" alt="" width="170px" height="160px">
+                                    {{/if}}
+                                    <br> <br> <br>
+
+                                    <a id="btn-photo" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">perm_camera_mic
+                                    </i></a>
+
+                                    <br>
+
+                                </div>
+
+                                <hr>
+                                <div class="input-field col s6 ">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="nom-user" type="text" class="validate">
+                                    <label for="nom-user"> Nom</label>
+                                </div>
+
+                                <div class="input-field col s6 ">
+                                    <i class="material-icons prefix">account_circle</i>
+                                    <input id="prenom-user" type="text" class="validate">
+                                    <label for="prenom-user"> Prenom</label>
+                                </div>
+                                <br>
+                                <div class="container" style="text-align: center">
+                                <button id="btn-enr-user" class="waves-effect waves-light btn-large">Enregister</button>
+                            </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <ul class="list-inline text-center">
+                        <li>
+                            <a href="#">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/FadlaouiHs">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:fadlaouimohamed@gmail.com">
+                                <span class="fa-stack fa-lg">
+                                    <i class="fa fa-circle fa-stack-2x"></i>
+                                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                    <p class="copyright text-muted">Copyright &copy; FADLAOUI Mohamed 2016</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</template>

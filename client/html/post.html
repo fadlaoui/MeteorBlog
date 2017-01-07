@@ -1,0 +1,31 @@
+<template name="post">
+    <header class="intro-header" style="background: url('/newy1.jpg'); height: 213px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                    <div class="site-heading" style="padding-top: 50px;">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1" style="text-align: center">
+
+    {{#each postes}}
+    <h1> {{titre}} </h1>
+        <div class="chip">
+            {{#if hasPhoto  author}}
+            <img src="{{getPhoto author}}" alt="Contact Person" width="40" height="40" >  {{/if}}
+
+            <span class="">{{auteur author}} on {{formateTime createdAt}}</span>
+        </div>
+        <br> <br>
+        <div style="text-align: center">
+            {{content}}
+
+        </div>
+
+    {{/each}}
+    </div>
+</template>

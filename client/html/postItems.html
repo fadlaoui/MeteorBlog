@@ -1,0 +1,38 @@
+<template name="postItems">
+    {{#each postes}}
+    <div class="post-preview">
+
+        <div class="chip">
+            {{#if hasPhoto  author}}
+            <img src="{{getPhoto author}}" alt="Contact Person" width="40" height="40" >
+            {{/if}}<span class="">{{auteur author}}</span>
+        </div>
+
+            <a href="#" class="">
+                <h2 class="post-title">
+                    {{titre}}
+                </h2></a>
+
+
+
+            {{#if isMymsg author}}
+            <div style="padding-top: 15px;">
+                        <span class="">
+  <a class="waves-effect waves-light btn red supprimer" name="{{_id}}" style="padding-top: 0px;">Supprimer</a>
+        </span>
+            <span class="">
+  <a class="waves-effect waves-light btn  blue modifier" id="{{_id}}" style="padding-top: 0px;">Modifer</a>
+        </span>
+            </div>
+            {{/if}}
+
+    </div>
+
+
+    <hr>
+    {{/each}}
+    <ul class="pager">
+        <li class="previous"><a href="#">&larr; Previous</a></li>
+        <li class="next {{#if totalCount }} hide {{/if}}" style=""><a href="#">Next &rarr; </a></li>
+    </ul>
+</template>
